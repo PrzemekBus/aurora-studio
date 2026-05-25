@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-white font-sans;
+  }
+}
+
+@theme {
+  /* ── Tła ── */
+  --color-bg-primary:   #0a0a0f;   /* główne tło strony */
+  --color-bg-secondary: #13131a;   /* sekcje alternatywne (testimonials, booking) */
+  --color-bg-tertiary:  #1c1c28;   /* karty, hover, galeria */
+
+  /* ── Karty / powierzchnie ── */
+  --color-surface:      #181825;   /* karty usług, testimonials */
+
+  /* ── Tekst ── */
+  --color-text-primary:   #f0ede8; /* nagłówki, treść główna */
+  --color-text-muted:     #8b8699; /* opisy, etykiety, placeholdery */
+
+  /* ── Akcent (złoto) ── */
+  --color-accent:         #c9a96e; /* CTA, ikony, linki, hover */
+  --color-accent-bg:      rgba(201, 169, 110, 0.12); /* badge hero, tło ikon */
+  --color-accent-dark:    #8b5e2a; /* głębszy złoty (light mode, avatary) */
+
+  /* ── Obramowania ── */
+  --color-border:         rgba(255, 255, 255, 0.07); /* domyślna ramka */
+  --color-border-hover:   rgba(201, 169, 110, 0.5);  /* ramka po hover */
+
+  /* ── Drugi akcent (fiolet) ── */
+  --color-accent2:        #7c6af7; /* avatary, highlights (opcjonalny) */
+
+  /* ── Statusy (dot "dostępne terminy") ── */
+  --color-success:        #4ade80;
+
+  /* ── Typografia ── */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* ── Promienie ── */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:  12px;
+  --radius-xl:  14px;
+  --radius-full: 9999px;
+}
