@@ -10,14 +10,14 @@ function Button({
   return (
     <button
       className={clsx(
-        "font-madium rounded-md transition-colors duration-300",
+        "transition hover:-translate-y-0.5 duration-300 cursor-pointer",
         {
-          'btn-primary': variant === 'primary',
-          'btn-secondary': variant === 'secondary',
+          'bg-accent hover:bg-accent-dark': variant === 'primary',
+          'border border-accent-bg hover:bg-accent-dark hover:border-accent': variant === 'secondary',
         },
         {
           'btn-sm': size === 'sm',
-          'btn-md': size === 'md',
+          'rounded-[10px] w-48 p-4': size === 'md',
           'btn-lg': size === 'lg',  
         },
         className
