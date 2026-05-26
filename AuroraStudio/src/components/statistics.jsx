@@ -4,7 +4,7 @@ const stats = [
   { value: "98%",  label: "Polecanych" },
 ];
 
-function HeroStatistics() {
+function Statistics() {
   return (
     <div className="flex flex-row gap-2">
       {stats.map((stat, index) => (
@@ -17,4 +17,4 @@ function HeroStatistics() {
   );
 }
 
-export default HeroStatistics;
+export default Statistics;

@@ -16,9 +16,7 @@ function Button({
           'border border-accent-bg hover:bg-accent-dark hover:border-accent': variant === 'secondary',
         },
         {
-          'btn-sm': size === 'sm',
-          'rounded-[10px] w-48 p-4': size === 'md',
-          'btn-lg': size === 'lg',  
+          'rounded-[10px] w-48 p-4': size === 'md', 
         },
         className
       )}
