@@ -1,10 +1,10 @@
 import Button from "./button";
-import Statistics from "./hero-statistics";
+import Statistics from "./statistics";
 
 function Hero() {
   return (
     <section className=" hero-section bg-bg-tertiary flex flex-row  h-min-screen">
-      <div className="hero-left my-px flex flex-col gap-4 bg-bg-primary w-1/2 pl-16 py-16">
+      <div className="hero-left mt-px flex flex-col gap-4 bg-bg-primary w-1/2 pl-16 py-16">
         <p className="hero-pill bg-accent-bg w-fit px-4 text-accent text-sm py-1 rounded-full uppercase">Nowa kolekcja 2025</p>
         <h1 className="hero-header text-4xl font-black font-serif w-full">Odkryj <span className="text-accent italic font-bold">piękno</span> w każdym detalu</h1>
         <p className="hero-description text-text-muted">Profesjonalne usługi fotograficzne i kreatywne sesje zdjęciowe dla osób i firm. Twoja historia w naszych kadrach.</p>

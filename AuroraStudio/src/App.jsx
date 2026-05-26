@@ -1,4 +1,4 @@
-import Hero from "./components/hero-section";
+import Hero from "./components/hero";
 import About from "./components/about";
 
 function App() {
