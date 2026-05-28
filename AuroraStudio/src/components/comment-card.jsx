@@ -1,18 +1,20 @@
-const getInitials = (name) =>
-  name
-    .split(" ")
-    .filter(word => /[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/.test(word[0]))
-    .slice(0, 2)
-    .map(word => word[0].toUpperCase())
-    .join("");
+const getInitials = name =>
+	name
+		.split(" ")
+		.filter(word => /[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/.test(word[0]))
+		.slice(0, 2)
+		.map(word => word[0].toUpperCase())
+		.join("")
 
 function CommentCard({ id, name, comment, rating, product }) {
 	return (
-		<div
-			className='comment-card  w-1/3 shrink-0 px-2'
-			id={id}>
-			<div className=' flex flex-col justify-between py-4 bg-bg-tertiary border border-accent-bg rounded-lg shadow-md px-6 h-full'>
-				<div className='flex items-center gap-0.5 mt-2'>
+		<div className='comment-card  w-1/3 shrink-0 px-2' id={id}>
+			<div className='flex flex-col justify-between py-4 bg-bg-tertiary border border-accent-bg rounded-lg shadow-md px-6 h-full relative overflow-hidden'>
+				
+        <div className={`circle w-32 h-32 rounded-full  absolute -right-8 -top-8 
+            ${id % 2 === 0 ? "bg-accent-bg/30" : "hidden"} `}></div>
+				
+        <div className='flex items-center gap-0.5 mt-2'>
 					{[...Array(5)].map((_, index) => (
 						<svg
 							key={index}
@@ -35,19 +37,21 @@ function CommentCard({ id, name, comment, rating, product }) {
 
 				<div className='line-trough border-b border-accent-bg my-4'></div>
 
-				<div className="card-footer flex items-center gap-4">
-          <p className={`left-col w-10 h-10 rounded-full bg-accent-bg flex items-center justify-center text-sm text-text-white font-bold
-          ${id % 2 === 0 
-          ? 'bg-accent2/20 text-accent2' 
-          : 'bg-accent/20 text-accent'
-          }`}>
-            {getInitials(name)}
-          </p>
-          <div className="right-col">
-            <p className="text-sm text-text-white font-medium">{name}</p>
-            <p className="text-sm text-text-muted">{product}</p>
-          </div>
-        </div>
+				<div className='card-footer flex items-center gap-4'>
+					<p
+						className={`left-col w-10 h-10 rounded-full bg-accent-bg flex items-center justify-center text-sm text-text-white font-bold
+          ${
+						id % 2 === 0
+							? "bg-accent2/20 text-accent2"
+							: "bg-accent/20 text-accent"
+					}`}>
+						{getInitials(name)}
+					</p>
+					<div className='right-col'>
+						<p className='text-sm text-text-white font-medium'>{name}</p>
+						<p className='text-sm text-text-muted'>{product}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
